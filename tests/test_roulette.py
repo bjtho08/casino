@@ -1,7 +1,7 @@
 """ Test module for roulette game simulation
 """
 import unittest
-from roulette import *
+from casino.roulette import *
 
 class NotUsed:
     """ Does nothing

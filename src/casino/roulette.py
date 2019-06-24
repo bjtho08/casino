@@ -34,14 +34,11 @@ class Outcome:
     def __eq__(self, other):
         """Compare the name attributes of self and other
 
-        >>> oc1 = Outcome("red", 2)
-        >>> oc2 = Outcome("red", 2)
-        >>> oc3 = Outcome("black", 2)
-        >>> oc1 == oc2
+        >>> Outcome("red", 2) == Outcome("red", 2)
         True
-        >>> oc1 == oc3
+        >>> Outcome("red", 2) == Outcome("black", 2)
         False
-        >>> oc1 == 'red'
+        >>> Outcome("red", 2) == 'red'
         True
         """
         if isinstance(other, str):
@@ -106,12 +103,10 @@ class Bin(frozenset):
     """Contains a collection of Outcomes which reflect the
     winning bets for a particular bin on a Roulette Wheel.
 
-    >>> oc1 = Outcome("1", 1)
     >>> ocred = Outcome("red", 1)
     >>> ocodd = Outcome("odd", 1)
     >>> oceven = Outcome("even", 1)
-    >>> occol1 = Outcome("col 1", 2)
-    >>> bin1 = Bin([oc1, ocred, ocodd, occol1])
+    >>> bin1 = Bin([ocred, ocodd])
     >>> ocodd in bin1
     True
     >>> oceven in bin1
